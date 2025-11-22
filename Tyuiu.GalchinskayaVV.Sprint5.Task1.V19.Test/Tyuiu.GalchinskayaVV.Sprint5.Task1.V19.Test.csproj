@@ -23,6 +23,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.GalchinskayaVV.Sprint5.Task1.V19.Lib\Tyuiu.GalchinskayaVV.Sprint5.Task1.V19.Lib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="tyuiu.cources.programming.interfaces">
+      <HintPath>..\..\Tyuiu.GalchinskayaVV.Sprint3\tyuiu.cources.programming.interfaces.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
 
