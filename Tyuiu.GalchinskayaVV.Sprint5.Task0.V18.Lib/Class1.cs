@@ -1,10 +1,11 @@
 ﻿using System;
+using tyuiu.cources.programming.interfaces.Sprint4;
 using tyuiu.cources.programming.interfaces.Sprint5;
 
 
 namespace Tyuiu.GalchinskayaVV.Sprint5.Task0.V18.Lib
 {
-    public class Class1
+    public class Class1: ISprint5Task0V18
     {
         public double Calculate(int x)
         {
@@ -20,6 +21,11 @@ namespace Tyuiu.GalchinskayaVV.Sprint5.Task0.V18.Lib
             File.WriteAllText(path, result.ToString());
 
             return path;
+        }
+
+        public string SaveToFileTextData(int x)
+        {
+            throw new NotImplementedException();
         }
     }
 }
