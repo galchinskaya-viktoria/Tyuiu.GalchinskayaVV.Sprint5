@@ -1,39 +1,37 @@
-﻿using Tyuiu.GalchinskayaVV.Sprint5.Task0.V18.Lib;
+﻿using System;
+using Tyuiu.GalchinskayaVV.Sprint5.Task0.V18.Lib;
 
-Console.Title = "Спринт #5 | Выполнил: Гальчинская В. В. | ПКТб-25-1";
-Console.WriteLine("***************************************************************************");
-Console.WriteLine("* Спринт #5                                                               *");
-Console.WriteLine("* Тема: Класс File. Запись данных в текстовый файл                        *");
-Console.WriteLine("* Задание #0                                                              *");
-Console.WriteLine("* Вариант #18                                                             *");
-Console.WriteLine("* Выполнил: Гальчинская Виктория Владимировна | ПКТб-25-1                 *");
-Console.WriteLine("***************************************************************************");
-Console.WriteLine("* УСЛОВИЕ:                                                                *");
-Console.WriteLine("* Дано выражение вычислить его значение при x = 3, результат сохранить    *");
-Console.WriteLine("* в текстовый файл OutPutFileTask0.txt и вывести на консоль.             *");
-Console.WriteLine("* Округлить до трёх знаков после запятой.                                *");
-Console.WriteLine("*                                                                         *");
-Console.WriteLine("* Выражение: y(x) = x / sqrt(x^2 + x)                                    *");
-Console.WriteLine("***************************************************************************");
-Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
-Console.WriteLine("***************************************************************************");
+namespace Tyuiu.GalchinskayaVV.Sprint5.Task0.V18
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Title = "Спринт #5 | Выполнил: Гальчинская Виктория Владимировна | ПКТб-25-1";
 
-int x = 3;
-Console.WriteLine($"x = {x}");
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* Спринт #5                                                               *");
+            Console.WriteLine("* Тема: Работа с файлами                                                  *");
+            Console.WriteLine("* Задание #0                                                              *");
+            Console.WriteLine("* Вариант #18                                                             *");
+            Console.WriteLine("* Выполнил: Гальчинская Виктория Владимировна | ПКТб-25-1                 *");
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* УСЛОВИЕ:                                                                *");
+            Console.WriteLine("* Вычислить значение функции при x = 3 и сохранить в файл                *");
+            Console.WriteLine("***************************************************************************");
 
-Class1 ds = new Class1();
-double result = ds.Calculate(x);
-string path = ds.SaveToFile(x);
+            int x = 3;
+            Console.WriteLine("x = " + x);
 
-Console.WriteLine("***************************************************************************");
-Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
-Console.WriteLine("***************************************************************************");
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
+            Console.WriteLine("***************************************************************************");
 
-Console.WriteLine($"Результат: {result}");
-Console.WriteLine($"Файл сохранен: {path}");
+            DataService ds = new DataService();
+            string path = ds.SaveToFileTextData(x);
 
-Console.WriteLine("Содержимое файла:");
-string fileContent = File.ReadAllText(path);
-Console.WriteLine(fileContent);
-
-Console.ReadKey();
+            Console.WriteLine(path);
+            Console.ReadKey();
+        }
+    }
+}
