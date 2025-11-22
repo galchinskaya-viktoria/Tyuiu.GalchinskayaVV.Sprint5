@@ -1,5 +1,4 @@
 ﻿using System;
-using tyuiu.cources.programming.interfaces.Sprint4;
 using tyuiu.cources.programming.interfaces.Sprint5;
 
 
