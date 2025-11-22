@@ -21,7 +21,7 @@ namespace Tyuiu.GalchinskayaVV.Sprint5.Task0.V18.Test
             Assert.IsTrue(File.Exists(path));
 
             string fileContent = File.ReadAllText(path);
-            string expected = "0.866";
+            string expected = "0,866";
             Assert.AreEqual(expected, fileContent.Trim());
         }
     }
